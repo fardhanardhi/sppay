@@ -1,6 +1,6 @@
 <?php
 
- $url    = 'http://localhost/belajarlogin'; //Sesuaikan dengan url project sobat
+ $url    = 'http://localhost/sppay'; //Sesuaikan dengan url project
  $dbhost = 'localhost';  //host untuk database, biasanya localhost
  $dbuser = 'root';  //username untuk mengakses database, jika dilokal biasanya 'root'
  $dbpass = '';  //password untuk mengakses databae, jika dilokal biasanya kosong

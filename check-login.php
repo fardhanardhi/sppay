@@ -22,8 +22,7 @@ if( strlen($username) < 2 )
  $username = $koneksi->escape_string($username);
  $password = $koneksi->escape_string($password);
 
- //hash dengan md5
- $password = md5($password);
+ $password = $password;
 
  //SQL command untuk memilih data berdasarkan parameter $username dan $password yang diinputkan
  $sql = "SELECT nama, level FROM users
@@ -42,17 +41,17 @@ if( strlen($username) < 2 )
  //check hasil perintah
  if( $query->num_rows == 1 )
  {
-  //jika data yang dimaksud ada maka akan ditampilkan
+  //jika data ada maka akan ditampilkan
   $row =$query->fetch_assoc();
 
   //data nama disimpan di session browser
   $_SESSION['nama_u'] = $row['nama'];
   $_SESSION['akses']    = $row['level'];
 
-  if( $row['level'] === 'manager')
+  if( $row['level'] === 'staff')
   {
    //data hak Admin di set
-   $_SESSION['saya_manager']= 'TRUE';
+   $_SESSION['saya_staff']= 'TRUE';
   }
 
   //menuju halaman sesuai hak akses
@@ -61,7 +60,7 @@ if( strlen($username) < 2 )
 
  }else{
 
-  //jika data yang dimaksud tidak ada
+  //jika data tidak ada
   $error = '<div class="alert alert-danger" role="alert">Username dan Password Tidak ditemukan </div>';
  }
 
