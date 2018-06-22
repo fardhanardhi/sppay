@@ -16,8 +16,13 @@
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <title></title>
 </head>
-<body>
+<body id="background">
   <div class="wrapper">
+    <div class="container">
+      <center><img src="img/osissd.png" /></center>
+    </div>
+    <br>
+
   <form class="form-signin" action="check-login.php" method="post">
     <h2 class="form-signin-heading" align="center">SILAHKAN LOGIN</h2><br />
     <input type="text" class="form-control" name="username" placeholder="Masukan Username" required/><br />

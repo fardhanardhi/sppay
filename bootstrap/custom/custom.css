@@ -1,14 +1,27 @@
 @import "bourbon";
 
 body {
- background: #eee !important;
+ /* background: #eee !important; */
  min-height: 75rem;
  padding-top: 4.5rem;
 }
 
+body#background {
+  background: url('../../img/GedungSD.jpg') no-repeat 50% 50% fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+
 .wrapper {
- margin-top: 80px;
+ margin-top: 30px;
   margin-bottom: 80px;
+}
+
+.container img {
+  width: 100px;
+  height: auto;
 }
 
 .form-signin {
