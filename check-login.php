@@ -53,6 +53,9 @@ if( strlen($username) < 2 )
    //data hak Admin di set
    $_SESSION['saya_staff']= 'TRUE';
   }
+  else {
+    $_SESSION['saya_wali']= 'TRUE';
+  }
 
   //menuju halaman sesuai hak akses
   header('location:'.$url.'/'.$_SESSION['akses'].'/');

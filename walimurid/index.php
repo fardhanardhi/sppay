@@ -1,12 +1,11 @@
 <?php
 session_start(); //memulai session
-if( !isset($_SESSION['nama_u']) ) //jika session nama tidak ada
+if( !isset($_SESSION['saya_wali']) ) //jika session login bukan wali
 {
- header('location:./../'.$_SESSION['akses']); //alihkan halaman
+ header('location:./../'.$_SESSION['akses']); //alihkan berdasarkan hak akses
  exit();
-}else{ //jika ada session
- $nama = $_SESSION['nama_u']; //menyimpan session nama ke variabel $nama
 }
+$nama = ( isset($_SESSION['nama_u']) ) ? $_SESSION['nama_u'] : '';
 
 ?>
 <html>
